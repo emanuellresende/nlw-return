@@ -3,12 +3,22 @@ import ideaImageUrl from '../../../images/idea.svg'
 import otherImageUrl from '../../../images/other.svg'
 
 import {FeedbackType, feedbackTypes} from '../../'
+import { FeedbackContentStep } from '../FeedbackContentStep'
+import CloseButton from '../../../../components/CloseButton'
 interface FeedBackTypeStepProps{
   onFeedBackTypeChanged: (type: FeedbackType) => void
 }
 
 export function FeedBackTypeStep(props: FeedBackTypeStepProps) {
   return (
+    <>
+    <header>
+    <span className="text-xl leading-6">
+      Leave your feedback
+    </span>
+    <CloseButton />
+  
+  </header>
     <div className="flex py-8 gap-2 w-full ">
       {Object.entries(feedbackTypes).map(([key, value]) => {
         return (
@@ -25,6 +35,7 @@ export function FeedBackTypeStep(props: FeedBackTypeStepProps) {
         );
       })}
     </div>
+    </>
   );
 }
 
