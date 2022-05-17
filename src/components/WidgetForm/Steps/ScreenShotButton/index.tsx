@@ -36,7 +36,7 @@ export function ScreenShotButton({ onScreenShotTook, screenshot }: ScreenShootBu
   return (
 
     <button
-      type='button'
+      type="button"
       className='p-2  rounded-md focus:ring-2 focus:ring-offset-2 focus:ring-offset-zinc-900 focus:ring-brand-500 hover:bg-brand-300 focus:outline-none bg-zinc-800 border-transparent hover: bg-zinc-700 transition-colors'
       onClick={handleTakeScreenShot}
     >

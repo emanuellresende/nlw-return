@@ -2,39 +2,39 @@ import bugImageUrl from '../../../images/bug.svg'
 import ideaImageUrl from '../../../images/idea.svg'
 import otherImageUrl from '../../../images/other.svg'
 
-import {FeedbackType, feedbackTypes} from '../../'
+import { FeedbackType, feedbackTypes } from '../../'
 import { FeedbackContentStep } from '../FeedbackContentStep'
 import CloseButton from '../../../../components/CloseButton'
-interface FeedBackTypeStepProps{
+interface FeedBackTypeStepProps {
   onFeedBackTypeChanged: (type: FeedbackType) => void
 }
 
 export function FeedBackTypeStep(props: FeedBackTypeStepProps) {
   return (
     <>
-    <header>
-    <span className="text-xl leading-6">
-      Leave your feedback
-    </span>
-    <CloseButton />
-  
-  </header>
-    <div className="flex py-8 gap-2 w-full ">
-      {Object.entries(feedbackTypes).map(([key, value]) => {
-        return (
-          <button className=" focus:outline-none focus:border-brand-500 border-2 border-transparent hover:border-brand-500 bg-zinc-800 rounded-lg py-5 w-24 flex-1 flex-col items-center"
-            key={key}
-            type={'button'}
-            onClick={() => {
-              props.onFeedBackTypeChanged(key as FeedbackType);
-            }}
-          >
-            <img src={value.image.source} alt={value.image.alt} />
-            <span>{value.title}</span>
-          </button>
-        );
-      })}
-    </div>
+      <header>
+        <span className="text-xl leading-6">
+          Leave your feedback
+        </span>
+        <CloseButton />
+
+      </header>
+      <div className="flex py-8 gap-2 w-full ">
+        {Object.entries(feedbackTypes).map(([key, value]) => {
+          return (
+            <button className=" focus:outline-none focus:border-brand-500 border-2 border-transparent hover:border-brand-500 bg-zinc-800 rounded-lg py-5 w-24 flex-1 flex-col items-center"
+              key={key}
+              type="button"
+              onClick={() => {
+                props.onFeedBackTypeChanged(key as FeedbackType);
+              }}
+            >
+              <img src={value.image.source} alt={value.image.alt} />
+              <span>{value.title}</span>
+            </button>
+          );
+        })}
+      </div>
     </>
   );
 }

@@ -5,7 +5,7 @@ import ideaImageUrl from '../../images/idea.svg'
 import otherImageUrl from '../../images/other.svg'
 import { FeedBackTypeStep } from "./Steps/FeedBackTypeStep"
 import { FeedbackContentStep } from "./Steps/FeedbackContentStep"
-import {FeedbackSuccessStep} from "./Steps/FeedbackSuccessStep"
+import { FeedbackSuccessStep } from "./Steps/FeedbackSuccessStep"
 export const feedbackTypes = {
   BUG: {
     title: 'Bug',
@@ -35,13 +35,16 @@ export function WidgetForm() {
   const [feedbackSend, setFeedBackSend] = useState(false)
   function handleRestartFeedback() {
     setFeedbackType(null)
+    setFeedBackSend(false);
   }
 
   return (
     <div className=" md:w-auto w-[calc(100vw-2rem)] shadow-lg items-center mb-4 flex flex-col bg-zinc-900 p-4 relative rounded-2xl">
 
       {feedbackSend ?
-        (<FeedbackSuccessStep/>)
+        (<FeedbackSuccessStep
+          onhandleRestartFeedback={handleRestartFeedback}
+        />)
         :
         (
           <>

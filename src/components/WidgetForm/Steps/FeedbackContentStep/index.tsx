@@ -15,18 +15,17 @@ export function FeedbackContentStep({ feedbackType, onFeedbackRestartRequest, on
   const [screenShot, setScreenShoot] = useState<string | null>(null)
   const [comment, setComment] = useState('')
   function handleSubmitFeedback(event: FormEvent) {
-    event.preventDefault();
-    console.log({
-      screenShot, comment
-    })
     onFeedbackSend();
+    console.log({
+      comment, screenShot
+    })
   }
   return (
 
     <>
       <header>
         <button
-          type='button'
+          type="button"
           className='left-5 top-5 absolute text-zinc-400 hover:text-zinc-100'
           onClick={onFeedbackRestartRequest}
         >
@@ -58,7 +57,7 @@ export function FeedbackContentStep({ feedbackType, onFeedbackRestartRequest, on
             onScreenShotTook={setScreenShoot}
           />
           <button
-            type={'submit'}
+            type="submit"
             disabled={comment.length === 0}
             className={'p-2  transition-colors focus:ring-2 focus:ring-offset-2 focus:ring-offset-zinc-900 focus:ring-brand-500 hover:bg-brand-300 focus:outline-none bg-brand-500 rounded-md border-transparent flex-1 flex justify-center items-center text-sm disabled:opacity-50 hover:disabled:bg-brand-500'}
           >
