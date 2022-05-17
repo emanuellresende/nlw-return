@@ -1,16 +1,6 @@
-import { ReactNode } from 'react';
 
-interface FeedbackSuccessStepProps {
-  children: ReactNode;
-}
-
-function FeedbackSuccessStep({ children }: FeedbackSuccessStepProps) {
+export function FeedbackSuccessStep() {
   return (
-    <>
-      <h1>FeedbackSuccessStep</h1>
-      {children}
-    </>
+<h1>Sucesso</h1>
   );
 }
-
-export default FeedbackSuccessStep;
