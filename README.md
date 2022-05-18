@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img alt="NLW-Return" height="80" title="Plant Manager" src=".github/logo.png" />
+  <p> Nlw </p>
 </h1>
 
 
