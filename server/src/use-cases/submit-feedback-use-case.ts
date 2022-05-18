@@ -13,9 +13,6 @@ export class SubmitFeedbackUseCase {
   ) { }
   async execute(request: SubmitFeedbackUseCaseRequest) {
     const { type, comment, screenshot } = request;
-if(!type){
-  throw new Error('erro')
-}
     await this.feedbacksRepository.create({
       type,
       comment,
@@ -27,8 +24,8 @@ if(!type){
       body: [
         ` <p>Type feedback: ${type}</p>`,
         ` <p>Comment: ${comment}</p>`,
+        screenshot ? `<img src="${screenshot}"/>` : null,
       ].join('\n')
     })
-
   }
 }
