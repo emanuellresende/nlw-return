@@ -32,15 +32,9 @@ https://nlw-return-7dhh3qfb1-emanuellresende.vercel.app/
 
 ## :hammer_and_wrench: Features 
 
--   [ ] Realiza o envio dos dados via e-mail
--   [ ] Obtém perfil do usuário cadastro no Discord (username e avatar);
--   [ ] Lista os servidores do Discord que o usuário faz parte;
--   [ ] Permite realizar o agendamento de partidas;
--   [ ] Permite filtrar as partidas por categoria;
--   [ ] Exibe se a partida foi agendada em um servidor próprio (anfitrião) ou em servidores de outros (convidado);
--   [ ] Compartilha o convite para ingressar no servidor do usuário;
--   [ ] Permite redirecionar o usuário para o seu próprio servidor;
--   [ ] Disponibiliza a função de Logout.
+-   [ ] Salva os dados no banco de dados
+-   [ ] Realiza um envio para o e-mail do proprioetário com os dados do feedback
+-   [ ] Anexa a foto da tela atual para enviar no feedback
 
 
 ## 🔖 Layout
